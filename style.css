@@ -1,0 +1,379 @@
+/* Algemene opmaak voor de body */
+body {
+    background-color: #01070a;
+    color: white;
+    min-height: 100vh;
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+
+    /* Vier verschillende lagen dots die onafhankelijk bewegen */
+    background-image: 
+        radial-gradient(white 1.4px, transparent 1.5px), /* Eerste laag dots */
+        radial-gradient(white 1.6px, transparent 1.5px), /* Tweede laag dots */
+        radial-gradient(white 1.2px, transparent 1.5px), /* Derde laag dots */
+        radial-gradient(white 1.8px, transparent 1.5px); /* Vierde laag dots */
+    
+    background-size: 
+        400px 400px, /* Grootte eerste laag */
+        500px 500px, /* Grootte tweede laag */
+        300px 300px, /* Grootte derde laag */
+        600px 600px; /* Grootte vierde laag */
+    
+    background-position: 
+        0 0, /* Startpositie eerste laag */
+        0 0, /* Startpositie tweede laag */
+        0 0, /* Startpositie derde laag */
+        0 0; /* Startpositie vierde laag */
+    
+    animation: 
+        moveDots1 15s infinite cubic-bezier(0.8, 0, 0.58, 1) alternate, /* Beweging eerste laag met ease-in-out */
+        moveDots2 15s infinite cubic-bezier(0.4, -0.55, 0.27, 1.55) alternate, /* Tweede laag met veer-achtig effect */
+        moveDots3 25s infinite cubic-bezier(0.6, 0.67, 0.83, 0.67) alternate, /* Derde laag met spring-effect */
+        moveDots4 15s infinite cubic-bezier(0.7, 0.1, 0.25, 1) alternate; /* Vierde laag met klassieke ease */
+}
+
+/* Keyframes voor de bewegingen van de verschillende dot-lagen */
+
+/* Eerste laag: Beweegt diagonaal naar rechtsboven en terug */
+@keyframes moveDots1 {
+    0% { background-position: 0 0; }
+    100% { background-position: 500px -500px; }
+}
+
+/* Tweede laag: Beweegt diagonaal naar linksonder en terug */
+@keyframes moveDots2 {
+    0% { background-position: 0 0; }
+    100% { background-position: -400px 400px; }
+}
+
+/* Derde laag: Beweegt naar rechts en terug */
+@keyframes moveDots3 {
+    0% { background-position: 0 0; }
+    100% { background-position: 600px 0; }
+}
+
+/* Vierde laag: Beweegt naar boven en terug */
+@keyframes moveDots4 {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -600px; }
+}
+
+
+
+
+/* Header met logo en tekst */
+h1.header {
+    border-top: 2px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Flexbox voor logomb container */
+div.logomb {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Stijl voor de tekst "PORTFOLIO" */
+div.logotext {
+    font-size: 2.5rem;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+}
+
+/* Stijl voor het logo */
+img.logo {
+    border-radius: 50%;
+    max-width: 100px;
+    height: auto;
+    margin-left: auto;
+}
+
+/* Navigatiebalk */
+ul.navigatie {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    border-bottom-left-radius: 7.5px;
+    padding: 0 10px;
+    width: auto;
+    position: absolute;
+    right: 0;
+}
+
+ul.navigatie li {
+    margin: 0;
+}
+
+/* Links in de navigatiebalk */
+a.navigatie {
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: #01070a;
+    text-decoration: none;
+    display: block;
+    padding: 4px;
+    background-color: white;
+}
+
+a.navigatie:hover {
+    background-color: orange;
+    transition: 1s;
+}
+
+/* Flexbox voor afbeelding en tekst naast elkaar */
+div.afbeeldingtekst {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 1200px; /* Maximaal 1200px breed voor leesbaarheid */
+}
+
+/* Afbeelding styling voor beide afbeeldingen */
+img.mezelf, img.gaming {
+    max-height: 400px;
+    max-width: 300px;
+    width: 100%; /* Zorg ervoor dat ze dezelfde breedte hebben */
+    height: auto; /* Houdt de verhoudingen in stand */
+    margin-right: 20px;
+    border-radius: 30px;
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de ruimte vult zonder vervorming */
+}
+
+/* Stijl voor de tekst naast de afbeelding */
+div.text {
+    flex-grow: 1;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Tabel opmaak */
+table {
+    width: 30%; /* Maak de tabel iets groter voor betere leesbaarheid */
+    border-collapse: collapse;
+    margin: 10px auto; /* Center de tabel */
+}
+
+table, th, td {
+    border: 1px solid white;
+    text-align: center;
+}
+
+th, td {
+    padding: 8px; /* Verminderd de padding om de tabel compacter te maken */
+}
+
+
+/* Oranje links */
+a.link {
+    color: orange;
+    text-decoration: none;
+}
+
+a.link:hover {
+    text-decoration: underline;
+}
+
+/* Gecentreerde headers */
+.over_mij {
+    text-align: center;
+}
+.tekstovermij {
+    text-align: center;
+}
+/* Zorg ervoor dat de link geen invloed heeft op de grootte van de afbeelding */
+/* Container voor CV-inhoud */
+#\31 {
+    display: flex;
+    justify-content: center; /* Horizontale centrering */
+
+    min-height: 100vh;       /* Zorg ervoor dat het hele scherm wordt gebruikt */
+  }
+  
+  /* De container die de CV-inhoud bevat */
+  .cv-container {
+    display: flex;
+    flex-direction: row;    /* Plaats de cv-left en cv-right naast elkaar */
+    justify-content: center; /* Zorg ervoor dat ze gecentreerd blijven */
+    gap: 20px;              /* Ruimte tussen de cv-left en cv-right */
+    max-width: 1000px;      /* Limiteer de breedte van de container */
+    margin: 50px auto;
+    width: 100%;            /* Zorg ervoor dat de container zich aanpast aan de breedte */
+  }
+  
+  /* De cv-left en cv-right secties */
+  .cv-left {
+    flex: 1;
+    margin-right: 40px;
+}
+
+/* Rechter sectie van de CV */
+.cv-right {
+    flex: 1;
+    text-align: left;
+}
+
+/* Programmeertalen styling */
+.programming-languages {
+    list-style: none;
+    padding: 0;
+}
+
+.programming-languages li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Kleine logo's voor programmeertalen */
+.logo-small {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+/* Contactinformatie opmaak */
+.contact-info {
+    max-width: 600px;
+    margin: 20px auto;
+    color: white;
+}
+
+.contact-info p {
+    font-size: 18px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-info a {
+    color: orange;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contactformulier opmaak */
+form {
+    max-width: 600px; /* Zorgt voor een maximale breedte van het formulier */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-sizing: border-box; /* Zorgt ervoor dat padding bij de breedte wordt gerekend */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: white;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: calc(100% - 20px); /* Vul de volledige breedte van het formulier minus de padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box; /* Zorgt ervoor dat padding niet de breedte van de velden beïnvloedt */
+    background-color: #2c2c2c;
+    color: white;
+}
+
+form textarea {
+    resize: vertical; /* Gebruikers kunnen de hoogte van de textarea aanpassen */
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background-color: darkorange;
+    transition: 1s;
+}
+
+/* Extra stijl voor de ul-lijsten in contactinformatie */
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Overige kleine aanpassingen */
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    outline: none;
+    border-color: orange;
+}
+
+
+
+#\31 {
+    display: flex;
+    justify-content: center; /* Horizontale centrering */
+
+    min-height: 100vh;       /* Zorg ervoor dat het hele scherm wordt gebruikt */
+  }
+  
+  /* De container die de CV-inhoud bevat */
+  .cv-container {
+    display: flex;
+    flex-direction: row;    /* Plaats de cv-left en cv-right naast elkaar */
+    justify-content: center; /* Zorg ervoor dat ze gecentreerd blijven */
+    gap: 20px;              /* Ruimte tussen de cv-left en cv-right */
+    max-width: 1000px;      /* Limiteer de breedte van de container */
+    width: 100%;            /* Zorg ervoor dat de container zich aanpast aan de breedte */
+  }
+  
+  /* De cv-left en cv-right secties */
+  .cv-left, .cv-right {
+    flex: 1;                /* Zorg ervoor dat beide kolommen evenveel ruimte krijgen */
+  }
+p.contact {
+    text-align: center;
+}
+ul.info{
+    text-align: center;
+}

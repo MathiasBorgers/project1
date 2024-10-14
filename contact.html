@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="afbeeldingen/MB_logo.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="header">
+      <div class="logomb">
+        <div class="logotext">Contact</div>
+        <a href="index.html">
+          <img class="logo" src="afbeeldingen/MB_logo.png" alt="logo MB" />
+      </a>
+      </div>
+    </h1>
+
+    <ul class="navigatie">
+      <li><a class="navigatie" href="index.html">Home</a></li>
+      <li><a class="navigatie" href="over_mij.html">Over mij</a></li>
+      <li><a class="navigatie" href="projects.html">Projects</a></li>
+      <li><a class="navigatie" href="cv.html">Cv</a></li>
+      <li><a class="navigatie" href="contact.html">Contact</a></li>
+    </ul>
+
+    <main>
+      <h2 class="over_mij">Hoe bereikt u mij?</h2>
+
+      <div class="contact-info">
+        <p class="contact">Je kan mij bereiken via de volgende kanalen:</p>
+        <ul class="info">
+          <li><strong>Telefoonnummer:</strong> +32 498405069</li>
+          <li><strong>Email:</strong> <a href="mailto:mathiasborgers@hotmail.com">mathiasborgers@hotmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mathias-borgers-4283762b8/" target="_blank">LinkedIn-profiel</a></li>
+        </ul>
+      </div>
+
+      <!-- Contactformulier -->
+      <h2 class="over_mij">Contactformulier</h2>
+      <form action="#" method="post">
+        <!-- Naam -->
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" placeholder="Je naam" required>
+        <br><br>
+
+        <!-- E-mailadres -->
+        <label for="email">E-mailadres:</label>
+        <input type="email" id="email" name="email" placeholder="Je e-mailadres" required>
+        <br><br>
+
+        <!-- Onderwerp -->
+        <label for="onderwerp">Onderwerp:</label>
+        <input type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp van je bericht" required>
+        <br><br>
+
+        <!-- Tekstveld voor de vraag -->
+        <label for="vraag">Je vraag of bericht:</label>
+        <textarea id="vraag" name="vraag" rows="5" placeholder="Typ hier je vraag of bericht" required></textarea>
+        <br><br>
+
+        <!-- Verstuurknop -->
+        <button type="submit">Verstuur</button>
+      </form>
+    </main>
+
+
+  </body>
+</html>
