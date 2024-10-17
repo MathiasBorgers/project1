@@ -129,7 +129,7 @@ a.navigatie {
 
 a.navigatie:hover {
     background-color:orange;
-    transition: 2s;
+    transition: 1s;
 }
 
 
@@ -322,7 +322,7 @@ form button {
 
 form button:hover {
     background-color: orange;
-    transition: 2s;
+    transition: 1s;
 }
 
 
@@ -377,4 +377,7 @@ p.contact {
 }
 ul.info{
     text-align: center;
+}
+#caption{
+    padding: 10px;
 }
